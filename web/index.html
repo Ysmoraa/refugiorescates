@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link href="index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <title>Rescate,rehabilitación y adopción de mascotas</title>
+        <div id="Encabezado">
+            <div id="Encabezado2" ><h3 >Refugio de mascotas</h3></div>
+            <div id="Encabezado3" style="display: inline;"><a href="datos.jsp" id="list1">Lista de animales registrados</a> </div>
+            
+        </div>
+        <form method="POST" action="miServlet" onsubmit="return validar()">
+            <label for="registroMascota" id="texto1" >Registro de mascota</label><br>
+            <label for="tipoAnimalF">Tipo de animal</label>
+            <select id="tipoAnimal" name="tipoAnimal" onchange="campos()">
+                <option disabled selected value="--">--</option>
+                <option value="Gato">Gato</option>
+                <option value="Perro">Perro</option>
+            </select><br><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+
+            <label for="raza">Raza:</label>
+            <input type="text" id="raza" name="raza"><br><br>
+
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color"><br><br>
+
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad"><br><br>
+
+            <div id="campoPerro">
+                <label id="adiestramiento2" for="adiestramiento">Nivel de adiestramiento:</label>
+                <select id="adiestramiento" name="adiestramiento">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select><br><br>
+            </div>
+
+            <div id="campoGato">
+                <label id="toxoplasmosis2" for="toxoplasmosis">Se encuentran libres de toxoplasmosis:</label>
+                <select id="toxoplasmosis" name="toxoplasmosis">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Guardar</button>
+        </form>
+
+        <script>
+            function validar() {
+                var animal = document.getElementById("tipoAnimal").value;
+                var nombre = document.getElementById("nombre").value;
+                var raza = document.getElementById("raza").value;
+                var color = document.getElementById("color").value;
+                var edad = document.getElementById("edad").value;
+
+                if (animal === "--" || nombre.length === 0 || raza.length === 0 || color.length === 0 || edad.length === 0) {
+                    alert('Falta llenar espacios');
+                    return false;
+                }
+                alert('Los datos se guardaron existosamente');
+                return true;
+            }
+
+
+            function campos() {
+
+                var animal = document.getElementById("tipoAnimal").value;
+
+                if (animal === "Gato") {
+                    document.getElementById("campoGato").style.display = "block";
+                    document.getElementById("campoPerro").style.display = "none";
+                } else if (animal === "Perro") {
+                    document.getElementById("campoPerro").style.display = "block";
+                    document.getElementById("campoGato").style.display = "none";
+                } else {
+                    document.getElementById("campoPerro").style.display = "none";
+                    document.getElementById("campoGato").style.display = "none";
+                }
+
+
+            }
+           
+        </script>
+
+    </body>
+</html>
+

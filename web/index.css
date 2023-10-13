@@ -1,0 +1,138 @@
+#campoPerro {
+    display: none;
+}
+#campoGato {
+    display: none;
+    margin-bottom: 20px;
+    
+}
+#texto1{
+  text-align: center;
+
+}
+#Encabezado{
+  background-color: #1A293B;
+  color: #C3D5E3;
+  padding: 30px;
+  margin-bottom: 20px;
+  position: initial;
+
+}
+#Encabezado2{
+  float: left;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-right: 650px;
+}
+#Encabezado3{ 
+  background-color: #C3D5E3;
+  padding: 10px;
+  border-radius: 20px;
+}
+#list1{
+  color: #000000;
+  text-decoration: none;
+}
+#Encabezado3:hover{
+  padding: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  background-image: url(https://img2.rtve.es/i/?w=1600&i=1611913347958.jpg);
+  background-size: cover;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-top: 20px;
+  color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#C3D5E3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #020A12;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+/* Estilos de la tabla */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #FFFFFF;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+table th {
+  background-color: #F8F8F8;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #777;
+  font-size: 14px;
+}
+
+button {
+  background-color: #007AFF;
+  border: none;
+  color: #233447;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 40%;
+  color: #233447;
+}
+
+button:hover {
+  background-color: #233447;
+}
+
+label[for="registroMascota"] {
+  font-size: 30px;
+  font-weight: bold;
+}
